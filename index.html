@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!------------------------- GSAP CDN -------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!------------------------- GSAP CDN -------------------------->
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="nav-logo">SM.</div>
+        <div class="nav-links">
+          <a href="#">PORTFOLIO</a>
+          <!-- <a href="#">Project</a>
+          <a href="#">Services</a>
+          <a href="#">Let's Talk</a> -->
+        </div>
+      </div>
+      <div class="header">
+        <div class="header-left col">
+          <div class="item">
+            <h1>Digitize</h1>
+            <h1>Ideas</h1>
+          </div>
+        </div>
+        <div class="header-right col">
+          <div class="play-wrapper">
+            <div class="play-btn">
+              <ion-icon name="play-sharp"></ion-icon>
+            </div>
+          </div>
+          <div class="pattern">
+            <ion-icon name="radio-button-on-outline"></ion-icon>
+            <ion-icon name="radio-button-on-outline"></ion-icon>
+            <ion-icon name="radio-button-on-outline"></ion-icon>
+          </div>
+          <div class="copy">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro
+              quasi aperiam magni cum accusantium nisi neque nostrum commodi
+              tempora impedit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <div class="btns col">
+          <div class="btn">
+            <span>WEB DEVELOPER & WEB DESIGNER</span>
+          </div>
+          <div class="btn">
+            <span>UI/UX DESIGNER</span>
+          </div>
+        </div>
+        <div class="divider col">
+          <div class="hr"></div>
+        </div>
+      </div>
+      <div class="hero">
+        <img src="setup.jpg" alt="" />
+        <div class="hero-wrapper"></div>
+        <div class="arrow">
+          <ion-icon name="arrow-forward-sharp"></ion-icon>
+        </div>
+      </div>
+      <div class="marquee">
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          quis ratione odit eaque excepturi, officia amet in provident rerum
+          ipsam?</span
+        >
+      </div>
+    </div>
+    <script>
+      gsap.from(".nav-logo, .nav-links > a", 2, {
+        top: "30px",
+        opacity: 0,
+        ease: "power4.inOut",
+        delay: 1,
+        stagger: {
+          amount: 0.3,
+        },
+      });
+
+      gsap.from("h1", 2, {
+        y: 50,
+        opacity: 0,
+        ease: "power4.inOut",
+        delay: 1.5,
+        stagger: {
+          amount: 0.3,
+        },
+      });
+
+      gsap.from(".play-wrapper, .pattern, .copy", 2, {
+        scaleY: 0,
+        ease: "power3.inOut",
+        stagger: {
+          amount: 0.3,
+        },
+        delay: 2.5,
+      });
+
+      gsap.from(".hr", 2, {
+        width: "0",
+        ease: "power3.inOut",
+        delay: 3,
+      });
+
+      gsap.from(".btns", 2, {
+        x: 50,
+        opacity: 0,
+        ease: "power3.inOut",
+        delay: 3,
+      });
+
+      gsap.from(".paly-btn", 2, {
+        scale: 0,
+        ease: "power3.inOut",
+        delay: 3,
+      });
+
+      gsap.from(".hero-wrapper", 2, {
+        width: "100%",
+        ease: "power3.inOut",
+        delay: 3,
+      });
+
+      gsap.from(".arrow", 2, {
+        scale: "0",
+        ease: "power3.inOut",
+        delay: 3,
+      });
+
+      gsap.from(".marquee", 2, {
+        bottom: "-10rem",
+        ease: "power3.inOut",
+        delay: 4,
+      });
+    </script>
+  </body>
+</html>
